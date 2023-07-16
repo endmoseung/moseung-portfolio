@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header = ({ setCurrentScroll }: HeaderProps) => {
   return (
-    <div className="w-[calc(100%-196px)] text-sub bg-white px-24 py-7 flex items-center justify-between fixed top-0 left-24">
+    <div className=" z-10 w-[calc(100%-196px)] text-sub bg-white px-24 py-7 flex items-center justify-between fixed top-0 left-24">
       <Image
         className=" rounded-full cursor-pointer"
         width={50}
