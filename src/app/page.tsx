@@ -13,7 +13,7 @@ import Section4 from '@/Components/Sections/Section4'
 import Section5 from '@/Components/Sections/Section5'
 
 export default function Home() {
-  const [currentScroll, setCurrentScroll] = useState<'Home' | ''>('Home')
+  const [currentScroll, setCurrentScroll] = useState<string>('Home')
   console.log(currentScroll)
   const [isHeaderShadow, setIsHeaderShadow] = useState(false)
 
@@ -49,7 +49,10 @@ export default function Home() {
       // onScroll={handleScroll}
       className="flex min-h-screen flex-col items-center justify-between p-24"
     >
-      <Header isHeaderShadow={isHeaderShadow}></Header>
+      <Header
+        setCurrentScroll={setCurrentScroll}
+        isHeaderShadow={isHeaderShadow}
+      ></Header>
       <Section1 ref={handleRef} />
       <Section2 ref={handleRef} children={<GoTop></GoTop>} />
       <Section3 ref={handleRef} />
