@@ -1,11 +1,27 @@
+import { SKILLS } from '@/utils/Constant/Constant'
 import React from 'react'
 
-const Section2 = () => {
+interface Section2Props {
+  children: React.ReactNode
+}
+
+const Section2 = ({ children }: Section2Props) => {
   return (
-    <div className="flex pt-[10.5rem]">
-      <p className=" blcok text-[18.75rem] font-sub opacity-90">Skills</p>
-      <div></div>
-    </div>
+    <section className="w-full flex pt-[10.5rem]">
+      {children}
+      <div>
+        {SKILLS.map((skill, index: number) => (
+          <div key={index}>
+            <p>{skill.title}</p>
+            <div className="flex ">
+              {skill.sub.map((sub, subIndex: number) => (
+                <div key={subIndex}>{sub}</div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }
 

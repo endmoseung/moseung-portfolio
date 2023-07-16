@@ -29,3 +29,18 @@ export const SNS = [
     link: 'https://www.linkedin.com/in/%EC%8A%B9%EB%AA%A8-%EA%B9%80-848b2b242/',
   },
 ]
+
+export const SKILLS = [
+  {
+    title: 'Frontend' as const,
+    sub: ['React', 'Typescript', 'Recoil', 'TailwindCss', 'CSS In Js'] as const,
+  },
+  {
+    title: 'Collaboration' as const,
+    sub: ['Slack', 'Git', 'Figma'] as const,
+  },
+  {
+    title: 'CI/CD' as const,
+    sub: ['Slack', 'Git', 'Figma'] as const,
+  },
+]

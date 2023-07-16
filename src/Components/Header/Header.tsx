@@ -5,11 +5,19 @@ import { TABS } from '@/utils/Constant/Constant'
 
 interface HeaderProps {
   setCurrentScroll: (line: string) => void
+  isHeaderShadow: boolean
 }
 
-const Header = ({ setCurrentScroll }: HeaderProps) => {
+const Header = ({ setCurrentScroll, isHeaderShadow }: HeaderProps) => {
   return (
-    <div className=" z-10 w-[calc(100%-196px)] text-sub bg-white px-24 py-7 flex items-center justify-between fixed top-0 left-24">
+    <div
+      style={{
+        boxShadow: isHeaderShadow
+          ? 'rgba(0, 0, 0, 0.03) 0px 30px 30px 0px'
+          : '',
+      }}
+      className=" transition-all duration-300 z-10 w-full bg-white px-24 py-7 flex items-center justify-between fixed top-0"
+    >
       <Image
         className=" rounded-full cursor-pointer"
         width={50}
@@ -20,7 +28,7 @@ const Header = ({ setCurrentScroll }: HeaderProps) => {
       <div className=" flex gap-5">
         {TABS.map((tab, index: number) => (
           <p
-            className=" cursor-pointer text-4xl font-bold"
+            className=" hover:text-sub transition-all cursor-pointer text-4xl font-bold"
             key={index}
             onClick={() => setCurrentScroll(tab.link)}
           >
