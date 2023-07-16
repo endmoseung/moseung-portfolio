@@ -1,22 +1,33 @@
 import Image from 'next/image'
 import React from 'react'
-// import Moseung from '../../../../public/assets/Images/moseung.jpeg'
+import Moseung from '/public/assets/Images/moseung.jpeg'
+import { TABS } from '@/utils/Constant/Constant'
 
-const Header = () => {
-  const TABS = [
-    { title: 'Home', link: 'Home' },
-    { title: 'About', link: 'About' },
-    { title: 'TechStack', link: 'TechStack' },
-    { title: 'Projects', link: 'Projects' },
-    { title: 'Contact', link: 'Contact' },
-  ]
+interface HeaderProps {
+  setCurrentScroll: (line: string) => void
+}
 
+const Header = ({ setCurrentScroll }: HeaderProps) => {
   return (
-    <div className=" flex justify-between">
-      <Image alt="Writers logo"></Image>
-      {TABS.map((tab) => (
-        <p>{tab.title}</p>
-      ))}
+    <div className="w-[calc(100%-196px)] text-sub bg-white px-24 py-7 flex items-center justify-between fixed top-0 left-24">
+      <Image
+        className=" rounded-full cursor-pointer"
+        width={50}
+        height={50}
+        src={Moseung}
+        alt="Writers logo"
+      ></Image>
+      <div className=" flex gap-5">
+        {TABS.map((tab, index: number) => (
+          <p
+            className=" cursor-pointer text-4xl font-bold"
+            key={index}
+            onClick={() => setCurrentScroll(tab.link)}
+          >
+            {tab.title}
+          </p>
+        ))}
+      </div>
     </div>
   )
 }

@@ -1,19 +1,17 @@
-import React, { ReactElement } from 'react'
-import IconsContainer from '../Common/IconsContainer'
+import React from 'react'
 
-const Section1 = (): ReactElement => {
+const Section3 = () => {
   return (
     <div className="pt-[10.5rem]">
-      <div className=" text-[72px] font-normal">
+      <div className=" text-[72px] font-light">
         <p>안녕하세요.</p>
         <div>
           <p className=" whitespace-pre inline-block">상놈 개발자 </p>
           <p className=" inline-block text-[#FF5722]">김승모입니다.</p>
         </div>
-        <IconsContainer></IconsContainer>
       </div>
     </div>
   )
 }
 
-export default Section1
+export default Section3
