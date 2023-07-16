@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Section4 = () => {
+interface Section4Props {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ref: any
+}
+
+const Section4 = ({ ref }: Section4Props) => {
   return (
-    <div className="pt-[10.5rem]">
+    <div ref={ref} className="pt-[10.5rem]">
       <div className=" text-[72px] font-light">
         <p>안녕하세요.</p>
         <div>

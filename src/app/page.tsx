@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 'use client'
 
 import Section1 from '@/Components/Sections/Section1'
@@ -41,7 +42,6 @@ export default function Home() {
       targetRefs.push(ref)
     }
   }
-  console.log(isIntersecting)
 
   return (
     <main
@@ -54,7 +54,11 @@ export default function Home() {
         isHeaderShadow={isHeaderShadow}
       ></Header>
       <Section1 ref={handleRef} />
-      <Section2 ref={handleRef} children={<GoTop></GoTop>} />
+      <Section2
+        ref={handleRef}
+        // eslint-disable-next-line react/no-children-prop
+        children={<GoTop isAnimationVisible={false} />}
+      />
       <Section3 ref={handleRef} />
       <Section4 ref={handleRef} />
       <Section5 ref={handleRef} />

@@ -1,9 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ReactElement } from 'react'
 import IconsContainer from '../Common/IconsContainer'
 
-const Section1 = (): ReactElement => {
+interface Section1Props {
+  ref: any
+}
+
+const Section1 = ({ ref }: Section1Props): ReactElement => {
   return (
-    <div className="pt-[10.5rem]">
+    <div ref={ref} className="pt-[10.5rem]">
       <div className=" text-[72px] font-normal">
         <p>안녕하세요.</p>
         <div>

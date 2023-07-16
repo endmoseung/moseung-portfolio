@@ -1,11 +1,12 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 
 interface GoTopProps {
-  isAnimationVisible: boolean
+  isAnimationVisible?: boolean
 }
 
 const GoTop = ({ isAnimationVisible }: GoTopProps) => {
+  console.log(isAnimationVisible)
   return (
     // <motion.p
     //   initial={{ opacity: 0, y: 100 }}

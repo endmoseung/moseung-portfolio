@@ -1,13 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SKILLS } from '@/utils/Constant/Constant'
 import React from 'react'
 
 interface Section2Props {
   children: React.ReactNode
+  ref: any
 }
 
-const Section2 = ({ children }: Section2Props) => {
+const Section2 = ({ children, ref }: Section2Props) => {
   return (
-    <section className="w-full flex pt-[10.5rem]">
+    <section ref={ref} className="w-full flex pt-[10.5rem]">
       {children}
       <div>
         {SKILLS.map((skill, index: number) => (
