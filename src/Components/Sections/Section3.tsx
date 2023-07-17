@@ -1,4 +1,8 @@
 import React from 'react'
+import Highlighter from '../Typography/Highlighter'
+import Cursive from '../Typography/Cursive'
+import Button from '../Common/Button'
+import { WORK } from '@/utils/Constant/Constant'
 
 interface Section3Props {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -7,14 +11,18 @@ interface Section3Props {
 
 const Section3 = ({ ref }: Section3Props) => {
   return (
-    <div ref={ref} className="pt-[10.5rem]">
-      <div className=" text-[72px] font-light">
-        <p>안녕하세요.</p>
-        <div>
-          <p className=" whitespace-pre inline-block">상놈 개발자 </p>
-          <p className=" inline-block text-[#FF5722]">김승모입니다.</p>
-        </div>
+    <div ref={ref} className=" relative pt-[10.5rem]">
+      <div>
+        {WORK.map((work, index: number) => (
+          <div key={index}>
+            <Cursive>{work.description}</Cursive>
+            <Button>{work.buttonTitle}</Button>
+          </div>
+        ))}
       </div>
+      <Highlighter className={' absolute top-0 right-[-20px]'}>
+        Work
+      </Highlighter>
     </div>
   )
 }

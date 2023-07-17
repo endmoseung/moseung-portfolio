@@ -44,3 +44,12 @@ export const SKILLS = [
     sub: ['Slack', 'Git', 'Figma'] as const,
   },
 ]
+
+export const WORK = [
+  { description: '이 회사에서 3년 재직했어요.', buttonTitle: '상세 보기' },
+  {
+    description:
+      '디자인 컴포넌트 제작, 사내 서비스 신규 개발과 유지보수, 개발 문화형성(코드리뷰,테크톡,페어프로그래밍)',
+    buttonTitle: '상세 보기',
+  },
+]
