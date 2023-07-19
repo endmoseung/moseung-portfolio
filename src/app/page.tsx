@@ -18,6 +18,8 @@ export default function Home() {
   const [currentScroll, setCurrentScroll] = useState<string>('Home')
   const [isHeaderShadow, setIsHeaderShadow] = useState(false)
 
+  console.log(currentScroll)
+
   const mainRef = useRef(null)
 
   const handleScroll = (): void => {
@@ -47,16 +49,13 @@ export default function Home() {
       // onScroll={handleScroll}
       className="flex min-h-screen flex-col items-center justify-between p-24"
     >
-      <Header
-        setCurrentScroll={setCurrentScroll}
-        isHeaderShadow={isHeaderShadow}
-      />
-      <Section1 ref={handleRef} />
-      <Section2 ref={handleRef} />
-      <Section3 ref={handleRef} />
-      <Section4 ref={handleRef} />
-      <Section5 ref={handleRef} />
-      <Footer></Footer>
+      <Header currentScroll={currentScroll} isHeaderShadow={isHeaderShadow} />
+      <Section1 setCurrentScroll={setCurrentScroll} />
+      <Section2 setCurrentScroll={setCurrentScroll} />
+      <Section3 setCurrentScroll={setCurrentScroll} />
+      <Section4 setCurrentScroll={setCurrentScroll} />
+      <Section5 setCurrentScroll={setCurrentScroll} />
+      <Footer />
       {isDocument && isHeaderShadow && (
         <ScrollTop dom={document.querySelector('#layout') as Element} />
       )}

@@ -153,35 +153,6 @@ input,
 textarea {
   border: inherit;
 }
-
-.slick-slide {
-  display: flex !important;
-  justify-content: center !important;
-}
-
-.slick-current .slick-select {
-  width: 186px !important;
-  background-color: #efe9fb;
-}
-
-.slick-current .slick-select span {
-  color: #703cde;
-}
-
-.line-clamp {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-
 body {
   min-height: -webkit-fill-available;
-}
-
-.year-slider {
-  display: block;
-}
-
-.month-slider {
-  display: block;
 }

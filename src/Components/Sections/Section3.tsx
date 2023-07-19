@@ -5,17 +5,19 @@ import Button from '../Common/Button'
 import { WORK } from '@/utils/Constant/Constant'
 import useIntersection from '@/utils/Hooks/useIntersection'
 import GoTop from '../Animation/GoTop'
+import useIsVisible from '@/utils/Hooks/useIsVisible'
 
 interface Section3Props {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ref: any
+  setCurrentScroll: (current: string) => void
 }
 
-const Section3 = ({ ref }: Section3Props) => {
+const Section3 = ({ setCurrentScroll }: Section3Props) => {
   const [targetRefs, isIntersecting] = useIntersection()
 
+  const refs = useIsVisible(() => setCurrentScroll('Work'))
+
   return (
-    <div id="Work" ref={ref} className="w-full relative pt-[10.5rem]">
+    <div id="Work" ref={refs} className="w-full relative pt-[10.5rem]">
       <div ref={targetRefs}>
         {WORK.map((work, index: number) => (
           <div key={index}>
