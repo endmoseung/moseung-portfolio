@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 
-const useIntersection = (): [React.RefObject<HTMLDivElement>, boolean] => {
+const useIntersection = (
+  threshold: number = 0.15
+): [React.RefObject<HTMLDivElement>, boolean] => {
   const targetRef = useRef<HTMLDivElement>(null)
   const [isIntersecting, setIsIntersecting] = useState<boolean>(false)
 
@@ -12,7 +14,7 @@ const useIntersection = (): [React.RefObject<HTMLDivElement>, boolean] => {
       {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1, // 돔 요소의 50% 이상이 화면에 보일 때 작동합니다.
+        threshold,
       }
     )
 
