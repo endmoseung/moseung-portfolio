@@ -1,7 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import Moseung from '/public/assets/Images/moseung.jpeg'
-import { TABS } from '@/utils/Constant/Constant'
+import { TABS, TabsOriginType } from '@/utils/Constant/Constant'
 
 interface HeaderProps {
   setCurrentScroll: (line: string) => void
@@ -9,6 +11,16 @@ interface HeaderProps {
 }
 
 const Header = ({ setCurrentScroll, isHeaderShadow }: HeaderProps) => {
+  const handleClickHeader = (tabs: TabsOriginType) => {
+    setTimeout(
+      () =>
+        document
+          .querySelector(`#${tabs === 'About' ? 'layout' : tabs}`)
+          ?.scrollIntoView({ behavior: 'smooth' }),
+      0
+    )
+  }
+
   return (
     <div
       style={{
@@ -30,7 +42,7 @@ const Header = ({ setCurrentScroll, isHeaderShadow }: HeaderProps) => {
           <p
             className=" hover:text-sub transition-all cursor-pointer text-4xl font-bold"
             key={index}
-            onClick={() => setCurrentScroll(tab.link)}
+            onClick={() => handleClickHeader(tab.title)}
           >
             {tab.title}
           </p>

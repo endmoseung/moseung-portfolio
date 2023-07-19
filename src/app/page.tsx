@@ -12,15 +12,11 @@ import { useScroll } from '@/utils/Hooks/useScroll'
 import useIntersect from '@/utils/Hooks/useIntersect'
 import Section4 from '@/Components/Sections/Section4'
 import Section5 from '@/Components/Sections/Section5'
+import ScrollTop from '@/Components/ScrollTop/ScrollTop'
 
 export default function Home() {
   const [currentScroll, setCurrentScroll] = useState<string>('Home')
-  console.log(currentScroll)
   const [isHeaderShadow, setIsHeaderShadow] = useState(false)
-
-  // const handleScroll = (e: UIEvent<HTMLDivElement>) => {
-  //   console.log(e)
-  // }
 
   const mainRef = useRef(null)
 
@@ -52,17 +48,16 @@ export default function Home() {
       <Header
         setCurrentScroll={setCurrentScroll}
         isHeaderShadow={isHeaderShadow}
-      ></Header>
-      <Section1 ref={handleRef} />
-      <Section2
-        ref={handleRef}
-        // eslint-disable-next-line react/no-children-prop
-        children={<GoTop isAnimationVisible={false} />}
       />
+      <Section1 ref={handleRef} />
+      <Section2 ref={handleRef} />
       <Section3 ref={handleRef} />
       <Section4 ref={handleRef} />
       <Section5 ref={handleRef} />
       <Footer></Footer>
+      {document && isHeaderShadow && (
+        <ScrollTop dom={document.querySelector('#layout') as Element} />
+      )}
     </main>
   )
 }

@@ -1,4 +1,7 @@
 import React from 'react'
+import Highlighter from '../Typography/Highlighter'
+import useIntersection from '@/utils/Hooks/useIntersection'
+import GoTop from '../Animation/GoTop'
 
 interface Section5Props {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -6,14 +9,26 @@ interface Section5Props {
 }
 
 const Section5 = ({ ref }: Section5Props) => {
+  const [targetRefs, isIntersecting] = useIntersection()
+
   return (
-    <div ref={ref} className="pt-[10.5rem]">
-      <div className=" text-[72px] font-light">
-        <p>안녕하세요.</p>
-        <div>
-          <p className=" whitespace-pre inline-block">상놈 개발자 </p>
-          <p className=" inline-block text-[#FF5722]">김승모입니다.</p>
-        </div>
+    <div
+      id={'Others'}
+      ref={ref}
+      className="h-screen w-full relative pt-[10.5rem]"
+    >
+      <div ref={targetRefs} className="flex justify-between">
+        <div></div>
+        <GoTop
+          className={' absolute right-[-20px] top-0'}
+          isAnimationVisible={isIntersecting}
+        >
+          <Highlighter>Others</Highlighter>
+        </GoTop>
+      </div>
+      <div>
+        <h1>Study</h1>
+        <div></div>
       </div>
     </div>
   )

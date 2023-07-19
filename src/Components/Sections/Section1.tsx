@@ -8,7 +8,7 @@ interface Section1Props {
 
 const Section1 = ({ ref }: Section1Props): ReactElement => {
   return (
-    <div ref={ref} className="pt-[10.5rem]">
+    <div ref={ref} id="About" className="pt-[10.5rem]">
       <div className=" text-[72px] font-normal">
         <p>안녕하세요.</p>
         <div>

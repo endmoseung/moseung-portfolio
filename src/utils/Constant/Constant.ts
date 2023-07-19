@@ -53,3 +53,5 @@ export const WORK = [
     buttonTitle: '상세 보기',
   },
 ]
+
+export const PROJECTS = [{ githubLink: '', buttonTitle: '상세 보기' }]
