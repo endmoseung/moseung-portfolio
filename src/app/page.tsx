@@ -8,17 +8,14 @@ import Section2 from '@/Components/Sections/Section2'
 import Section3 from '@/Components/Sections/Section3'
 import Footer from '@/Components/Footer/Footer'
 import { useScroll } from '@/utils/Hooks/useScroll'
-import useIntersect from '@/utils/Hooks/useIntersect'
 import Section4 from '@/Components/Sections/Section4'
 import Section5 from '@/Components/Sections/Section5'
 import ScrollTop from '@/Components/ScrollTop/ScrollTop'
 import useIsDocument from '@/utils/Hooks/useIsDocument'
 
 export default function Home() {
-  const [currentScroll, setCurrentScroll] = useState<string>('Home')
+  const [currentScroll, setCurrentScroll] = useState<string>('About')
   const [isHeaderShadow, setIsHeaderShadow] = useState(false)
-
-  console.log(currentScroll)
 
   const mainRef = useRef(null)
 
@@ -31,15 +28,6 @@ export default function Home() {
   }
 
   useScroll(() => handleScroll())
-
-  const [targetRefs, isIntersecting] = useIntersect()
-
-  const handleRef = (ref: React.RefObject<HTMLElement>) => {
-    // DOM 요소를 targetRefs 배열에 추가합니다.
-    if (ref && ref.current) {
-      targetRefs.push(ref)
-    }
-  }
 
   const isDocument = useIsDocument()
 
