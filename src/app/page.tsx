@@ -17,6 +17,8 @@ export default function Home() {
   const [currentScroll, setCurrentScroll] = useState<string>('About')
   const [isHeaderShadow, setIsHeaderShadow] = useState(false)
 
+  console.log(currentScroll)
+
   const mainRef = useRef(null)
 
   const handleScroll = (): void => {

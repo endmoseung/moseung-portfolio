@@ -4,6 +4,7 @@ import useIntersection from '@/utils/Hooks/useIntersection'
 import GoTop from '../Animation/GoTop'
 import { PRESENTATION, STUDY } from '@/utils/Constant/Constant'
 import useIsVisible from '@/utils/Hooks/useIsVisible'
+import { BiBulb } from 'react-icons/bi'
 
 interface Section5Props {
   setCurrentScroll: (current: string) => void
@@ -12,7 +13,7 @@ interface Section5Props {
 const Section5 = ({ setCurrentScroll }: Section5Props) => {
   const [targetRefs, isIntersecting] = useIntersection()
 
-  const refs = useIsVisible(() => setCurrentScroll('Others'))
+  const refs = useIsVisible(() => setCurrentScroll('Others'), 0.3)
 
   return (
     <div
@@ -26,15 +27,18 @@ const Section5 = ({ setCurrentScroll }: Section5Props) => {
           <Highlighter size="small">Others</Highlighter>
         </GoTop>
       </div>
-      <div>
-        <h1>Study</h1>
+      <div className="flex flex-col gap-5 mb-5">
+        <p className="mb-5 font-bold text-[3rem]">Study</p>
         {STUDY.map((study, index: number) => (
-          <div key={index}>
-            <p>{study.title}</p>
+          <div className="flex flex-col gap-2" key={index}>
+            <p className="font-bold text-[2rem] text-main">{study.title}</p>
             <p>{study.duration}</p>
-            <div>
+            <div className="flex flex-col gap-2">
               {study.details.map((detail, index: number) => (
-                <p key={index}>{detail}</p>
+                <div className="flex items-center" key={index}>
+                  <BiBulb className="mr-2" />
+                  <p className="leading-4">{detail}</p>
+                </div>
               ))}
             </div>
             <p>관련링크들</p>
@@ -55,7 +59,7 @@ const Section5 = ({ setCurrentScroll }: Section5Props) => {
         ))}
       </div>
       <div>
-        <h1>Presentation</h1>
+        <p className="font-bold text-[3rem]">Presentation</p>
         {PRESENTATION.map((presentation, index: number) => (
           <div key={index}>
             <p>{presentation.title}</p>

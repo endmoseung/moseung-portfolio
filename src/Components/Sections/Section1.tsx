@@ -12,7 +12,11 @@ const Section1 = ({ setCurrentScroll }: Section1Props): ReactElement => {
   const refs = useIsVisible(() => setCurrentScroll('About'))
 
   return (
-    <div ref={refs} id="About" className="mb-[10.5rem] pt-[10.5rem]">
+    <div
+      ref={refs}
+      id="About"
+      className="mb-[10.5rem] pt-[10.5rem] pl-15 w-[calc(100%)]"
+    >
       <div className=" mb-14 text-[72px] font-normal">
         <p>안녕하세요.</p>
         <div className="mb-4">
