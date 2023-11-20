@@ -33,7 +33,15 @@ export const SNS = [
 export const SKILLS = [
   {
     title: 'Frontend' as const,
-    sub: ['React', 'Typescript', 'Recoil', 'TailwindCss', 'CSS In Js'] as const,
+    sub: [
+      'React',
+      'Typescript',
+      'Recoil',
+      'Zustand',
+      'TailwindCss',
+      'CSS In Js',
+      'NextJS(13)',
+    ] as const,
   },
   {
     title: 'Collaboration' as const,
