@@ -6,11 +6,11 @@ import { PRESENTATION, STUDY } from '@/utils/Constant/Constant'
 import useIsVisible from '@/utils/Hooks/useIsVisible'
 import { BiBulb } from 'react-icons/bi'
 
-interface Section5Props {
+interface OthersProps {
   setCurrentScroll: (current: string) => void
 }
 
-const Section5 = ({ setCurrentScroll }: Section5Props) => {
+const Others = ({ setCurrentScroll }: OthersProps) => {
   const [targetRefs, isIntersecting] = useIntersection()
 
   const refs = useIsVisible(() => setCurrentScroll('Others'), 0.3)
@@ -27,11 +27,11 @@ const Section5 = ({ setCurrentScroll }: Section5Props) => {
           <Highlighter size="small">Others</Highlighter>
         </GoTop>
       </div>
-      <div className="flex flex-col gap-5 mb-5">
-        <p className="mb-5 font-bold text-[3rem]">Study</p>
+      <div className="mb-5 flex flex-col gap-5">
+        <p className="mb-5 text-[3rem] font-bold">Study</p>
         {STUDY.map((study, index: number) => (
           <div className="flex flex-col gap-2" key={index}>
-            <p className="font-bold text-[2rem] text-main">{study.title}</p>
+            <p className="text-[2rem] font-bold text-main">{study.title}</p>
             <p>{study.duration}</p>
             <div className="flex flex-col gap-2">
               {study.details.map((detail, index: number) => (
@@ -45,7 +45,7 @@ const Section5 = ({ setCurrentScroll }: Section5Props) => {
             <div className="flex flex-col">
               {study.links.map((link, index: number) => (
                 <a
-                  className="underline font-bold text-black"
+                  className="font-bold text-black underline"
                   rel="noreferrer"
                   target="_blank"
                   key={index}
@@ -59,7 +59,7 @@ const Section5 = ({ setCurrentScroll }: Section5Props) => {
         ))}
       </div>
       <div>
-        <p className="font-bold text-[3rem]">Presentation</p>
+        <p className="text-[3rem] font-bold">Presentation</p>
         {PRESENTATION.map((presentation, index: number) => (
           <div key={index}>
             <p>{presentation.title}</p>
@@ -71,7 +71,7 @@ const Section5 = ({ setCurrentScroll }: Section5Props) => {
             <div className="flex flex-col">
               {presentation.links.map((link, index: number) => (
                 <a
-                  className="underline font-bold text-black"
+                  className="font-bold text-black underline"
                   rel="noreferrer"
                   target="_blank"
                   key={index}
@@ -88,4 +88,4 @@ const Section5 = ({ setCurrentScroll }: Section5Props) => {
   )
 }
 
-export default Section5
+export default Others

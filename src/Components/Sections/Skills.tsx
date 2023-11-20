@@ -8,11 +8,11 @@ import Highlighter from '../Typography/Highlighter'
 import GoTop from '../Animation/GoTop'
 import useIsVisible from '@/utils/Hooks/useIsVisible'
 
-interface Section2Props {
+interface SkillsProps {
   setCurrentScroll: (current: string) => void
 }
 
-const Section2 = ({ setCurrentScroll }: Section2Props) => {
+const Skills = ({ setCurrentScroll }: SkillsProps) => {
   const [targetRefs, isHighlighterIntersecting] = useIntersection(0.3)
   const [skill1TargetRefs, isSkill1Intersecting] = useIntersection(0.6)
   const [skill2TargetRefs, isSkill2Intersecting] = useIntersection(0)
@@ -27,7 +27,7 @@ const Section2 = ({ setCurrentScroll }: Section2Props) => {
       </GoTop>
       <div className="pt-[260px]" ref={targetRefs}>
         {SKILLS.map((skill, index: number) => (
-          <div key={index} className="flex flex-col mb-[120px]">
+          <div key={index} className="mb-[120px] flex flex-col">
             <GoTop
               isNoInitial={true}
               isAnimationVisible={
@@ -64,4 +64,4 @@ const Section2 = ({ setCurrentScroll }: Section2Props) => {
   )
 }
 
-export default Section2
+export default Skills

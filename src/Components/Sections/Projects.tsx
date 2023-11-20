@@ -7,11 +7,11 @@ import useIsVisible from '@/utils/Hooks/useIsVisible'
 import HorizontalScroll from '../Animation/HorizontalScroll'
 import ScrollSection from '../Animation/HorizontalScroll'
 
-interface Section4Props {
+interface ProjectsProps {
   setCurrentScroll: (current: string) => void
 }
 
-const Section4 = ({ setCurrentScroll }: Section4Props) => {
+const Projects = ({ setCurrentScroll }: ProjectsProps) => {
   const [targetRefs, isIntersecting] = useIntersection()
 
   const refs = useIsVisible(() => setCurrentScroll('Project'))
@@ -30,4 +30,4 @@ const Section4 = ({ setCurrentScroll }: Section4Props) => {
   )
 }
 
-export default Section4
+export default Projects

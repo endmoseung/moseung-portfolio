@@ -1,23 +1,21 @@
 /* eslint-disable react/react-in-jsx-scope */
 'use client'
 
-import Section1 from '@/Components/Sections/Section1'
-import Header from '@/Components/Header/Header'
-import { useRef, useState } from 'react'
-import Section2 from '@/Components/Sections/Section2'
-import Section3 from '@/Components/Sections/Section3'
 import Footer from '@/Components/Footer/Footer'
-import { useScroll } from '@/utils/Hooks/useScroll'
-import Section4 from '@/Components/Sections/Section4'
-import Section5 from '@/Components/Sections/Section5'
+import Header from '@/Components/Header/Header'
 import ScrollTop from '@/Components/ScrollTop/ScrollTop'
+import Projects from '@/Components/Sections/Projects'
+import About from '@/Components/Sections/About'
+import Skills from '@/Components/Sections/Skills'
+import Work from '@/Components/Sections/Work'
 import useIsDocument from '@/utils/Hooks/useIsDocument'
+import { useScroll } from '@/utils/Hooks/useScroll'
+import { useRef, useState } from 'react'
+import Others from '@/Components/Sections/Others'
 
 export default function Home() {
   const [currentScroll, setCurrentScroll] = useState<string>('About')
   const [isHeaderShadow, setIsHeaderShadow] = useState(false)
-
-  console.log(currentScroll)
 
   const mainRef = useRef(null)
 
@@ -37,14 +35,14 @@ export default function Home() {
     <main
       ref={mainRef}
       // onScroll={handleScroll}
-      className="flex min-h-screen flex-col items-center justify-between p-24"
+      className="flex min-h-screen flex-col items-center justify-center p-[30px] mobile:p-[20px]"
     >
       <Header currentScroll={currentScroll} isHeaderShadow={isHeaderShadow} />
-      <Section1 setCurrentScroll={setCurrentScroll} />
-      <Section2 setCurrentScroll={setCurrentScroll} />
-      <Section3 setCurrentScroll={setCurrentScroll} />
-      <Section4 setCurrentScroll={setCurrentScroll} />
-      <Section5 setCurrentScroll={setCurrentScroll} />
+      <About setCurrentScroll={setCurrentScroll} />
+      <Skills setCurrentScroll={setCurrentScroll} />
+      <Work setCurrentScroll={setCurrentScroll} />
+      <Projects setCurrentScroll={setCurrentScroll} />
+      <Others setCurrentScroll={setCurrentScroll} />
       <Footer />
       {isDocument && isHeaderShadow && (
         <ScrollTop dom={document.querySelector('#layout') as Element} />
