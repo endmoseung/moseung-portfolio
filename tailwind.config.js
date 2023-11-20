@@ -5,6 +5,9 @@ module.exports = {
   },
   plugins: [],
   theme: {
+    fontFamily: {
+      MainFont: ['MainFont'],
+    },
     extend: {
       colors: {
         'primary-1': '#6026DA',
@@ -42,6 +45,10 @@ module.exports = {
 
         main: '#FF5722 ',
         sub: '#00BCD4',
+      },
+      screens: {
+        tablet: { max: '1260px' },
+        mobile: { min: '0px', max: '768px' },
       },
     },
   },
