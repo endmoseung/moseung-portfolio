@@ -19,6 +19,7 @@
     "eslint-plugin-react": "^7.32.2",
     "framer-motion": "^10.12.18",
     "gsap": "^3.12.2",
+    "lodash": "^4.17.21",
     "next": "latest",
     "postcss": "8.4.25",
     "prettier": "^3.0.0",
@@ -29,6 +30,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/lodash": "^4",
     "eslint": "^8.44.0",
     "eslint-config-next": "13.4.9",
     "eslint-config-prettier": "^8.8.0",
