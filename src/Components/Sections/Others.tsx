@@ -16,7 +16,7 @@ const Others = ({ setCurrentScroll }: OthersProps) => {
   const refs = useIsVisible(() => setCurrentScroll('Others'), 0.3)
 
   return (
-    <div
+    <section
       id={'Others'}
       ref={refs}
       className="relative mb-10 h-fit w-full pt-[10.5rem]"
@@ -24,7 +24,7 @@ const Others = ({ setCurrentScroll }: OthersProps) => {
       <div ref={targetRefs} className="flex justify-between">
         <div />
         <GoTop isAnimationVisible={isIntersecting}>
-          <Highlighter size="small">Others</Highlighter>
+          <Highlighter>Others</Highlighter>
         </GoTop>
       </div>
       <div className="mb-5 flex flex-col gap-5">
@@ -84,7 +84,7 @@ const Others = ({ setCurrentScroll }: OthersProps) => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

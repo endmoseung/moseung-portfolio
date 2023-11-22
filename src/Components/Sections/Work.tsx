@@ -20,12 +20,9 @@ const Work = ({ setCurrentScroll }: Section3Props) => {
     <section
       id="Work"
       ref={refs}
-      className="relative w-full max-w-[1200px] rounded-[50px] bg-gray-100 pt-[300px] mobile:rounded-[30px]"
+      className=" relative w-full max-w-[1200px] rounded-[50px] bg-gray-100 p-12 mobile:rounded-[30px] mobile:p-8"
     >
-      <GoTop
-        className={' absolute right-[-20px] top-0'}
-        isAnimationVisible={isIntersecting}
-      >
+      <GoTop isAnimationVisible={isIntersecting}>
         <Highlighter>Work</Highlighter>
       </GoTop>
       <div className="flex" ref={targetRefs}>

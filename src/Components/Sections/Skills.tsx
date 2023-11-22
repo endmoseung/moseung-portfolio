@@ -21,11 +21,15 @@ const Skills = ({ setCurrentScroll }: SkillsProps) => {
   const refs = useIsVisible(() => setCurrentScroll('Skills'))
 
   return (
-    <section ref={refs} id={'Skills'} className="flex h-screen w-full">
+    <section
+      ref={refs}
+      id={'Skills'}
+      className="flex w-full flex-col gap-20 pt-32 tablet:gap-16 tablet:pt-24 mobile:gap-12 mobile:pt-20"
+    >
       <GoTop isAnimationVisible={isHighlighterIntersecting}>
         <Highlighter>SKills</Highlighter>
       </GoTop>
-      <div className="pt-[260px]" ref={targetRefs}>
+      <div className="" ref={targetRefs}>
         {SKILLS.map((skill, index: number) => (
           <div key={index} className="mb-[120px] flex flex-col">
             <GoTop
@@ -39,6 +43,7 @@ const Skills = ({ setCurrentScroll }: SkillsProps) => {
               }
             >
               <div
+                className="flex flex-col gap-y-5"
                 ref={
                   index === 0
                     ? skill1TargetRefs
@@ -47,12 +52,14 @@ const Skills = ({ setCurrentScroll }: SkillsProps) => {
                     : skill3TargetRefs
                 }
               >
-                <p className=" text-4xl">{skill.title}</p>
+                <p className="w-fit rounded-full bg-gray-900 px-6 py-3 text-4xl  text-white">
+                  {skill.title}
+                </p>
                 <div className="flex gap-1">
                   {skill.sub.map((sub, subIndex: number) => (
-                    <div key={subIndex}>{`${sub}${
+                    <p className="text-xl" key={subIndex}>{`${sub}${
                       subIndex !== skill.sub.length - 1 ? ',' : ''
-                    }`}</div>
+                    }`}</p>
                   ))}
                 </div>
               </div>

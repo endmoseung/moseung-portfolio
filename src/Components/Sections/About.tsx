@@ -12,24 +12,25 @@ const About = ({ setCurrentScroll }: AboutProps): ReactElement => {
   const refs = useIsVisible(() => setCurrentScroll('About'))
 
   return (
-    <div
+    <section
       ref={refs}
       id="About"
-      className="mb-[10.5rem] w-[calc(100%)] pl-[60px] pt-[10.5rem]"
+      className="w-[calc(100%)] py-32 tablet:py-24 mobile:py-20 "
     >
-      <div className=" mb-14 text-[72px] font-normal">
+      <div className="mb-14 text-center font-MainFont text-6xl font-bold leading-[82.5px] transition-all duration-300 tablet:text-5xl tablet:leading-[66px] mobile:text-4xl mobile:leading-[50px]">
         <p>안녕하세요.</p>
-        <div className="mb-4">
+        <div className="mb-8">
           <p className=" inline-block whitespace-pre">
             누구와도 잘 어울릴 수 있는{' '}
           </p>
+          <br />
           <p className=" inline-block text-[#FF5722]">
             1년차 개발자 김승모입니다.
           </p>
         </div>
-        <p className="m-auto block w-[60%] whitespace-pre text-[36px] font-normal leading-[44px]">
+        <p className="m-auto block w-[500px] whitespace-pre text-2xl font-normal tablet:w-full mobile:text-xl">
           {
-            '사람을 좋아하고 소통을 중요시하는 협업을 사랑하는 개발자로서,\n상호간의 협업과 소통을 통해 최상의 결과물을 만들어내기 위한\n팀 문화에 관심이 많아 회사에 기여한 경험이 있습니다.\n지식을 습득하고 성장하기 위해 꾸준히 공부하고,\n함께 성장하는 환경에서 빠르게 발전하고 있습니다.'
+            '사람을 좋아하고 소통을 중요시하는 협업을 사랑하는\n개발자로서, 상호간의 협업과 소통을 통해 최상의\n결과물을 만들어내기 위한 팀 문화에 관심이 많아\n회사에 기여한 경험이 있습니다.\n지식을 습득하고 성장하기 위해 꾸준히 공부하고,\n함께 성장하는 환경에서 빠르게 발전하고 있습니다.'
           }
         </p>
       </div>
@@ -41,7 +42,7 @@ const About = ({ setCurrentScroll }: AboutProps): ReactElement => {
         <div />
         <IconsContainer />
       </div>
-    </div>
+    </section>
   )
 }
 
