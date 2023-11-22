@@ -41,15 +41,17 @@ export const SKILLS = [
       'TailwindCss',
       'CSS In Js',
       'NextJS(13)',
+      'Echarts',
     ] as const,
+    description: '',
   },
   {
     title: 'Collaboration' as const,
-    sub: ['Slack', 'Git', 'Figma'] as const,
+    sub: ['Slack', 'Git', 'Figma', 'Jira'] as const,
   },
   {
-    title: 'CI/CD' as const,
-    sub: ['Slack', 'Git', 'Figma'] as const,
+    title: 'ETC' as const,
+    sub: ['Datadog', 'AWS', 'Jenkins'] as const,
   },
 ]
 

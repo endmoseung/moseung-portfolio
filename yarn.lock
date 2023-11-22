@@ -347,6 +347,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4":
+  version: 4.14.202
+  resolution: "@types/lodash@npm:4.14.202"
+  checksum: a91acf3564a568c6f199912f3eb2c76c99c5a0d7e219394294213b3f2d54f672619f0fde4da22b29dc5d4c31457cd799acc2e5cb6bd90f9af04a1578483b6ff7
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:20.4.1":
   version: 20.4.1
   resolution: "@types/node@npm:20.4.1"
@@ -2294,6 +2301,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"heroicons@npm:^2.0.18":
+  version: 2.0.18
+  resolution: "heroicons@npm:2.0.18"
+  checksum: 12cba153f9ac1f7d1d657bb22b567a3226cce2e18b1a47219ee63527d56cce91ac63006b69d8e7323c8bd7b834044fe99d12d652d8bf3da579db531a311b704f
+  languageName: node
+  linkType: hard
+
 "http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
   resolution: "http-cache-semantics@npm:4.1.1"
@@ -2795,6 +2809,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash@npm:4.17.21"
+  checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
+  languageName: node
+  linkType: hard
+
 "loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
@@ -3028,6 +3049,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "moseung-portfolio@workspace:."
   dependencies:
+    "@types/lodash": ^4
     "@types/node": 20.4.1
     "@types/react": 18.2.14
     "@types/react-dom": 18.2.6
@@ -3043,6 +3065,8 @@ __metadata:
     eslint-plugin-tailwindcss: ^3.13.0
     framer-motion: ^10.12.18
     gsap: ^3.12.2
+    heroicons: ^2.0.18
+    lodash: ^4.17.21
     next: latest
     postcss: 8.4.25
     prettier: ^3.0.0
