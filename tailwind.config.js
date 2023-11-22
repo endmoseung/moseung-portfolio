@@ -47,7 +47,7 @@ module.exports = {
         sub: '#00BCD4',
       },
       screens: {
-        tablet: { max: '1260px' },
+        tablet: { max: '1280px' },
         mobile: { min: '0px', max: '768px' },
       },
     },
