@@ -2301,6 +2301,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"heroicons@npm:^2.0.18":
+  version: 2.0.18
+  resolution: "heroicons@npm:2.0.18"
+  checksum: 12cba153f9ac1f7d1d657bb22b567a3226cce2e18b1a47219ee63527d56cce91ac63006b69d8e7323c8bd7b834044fe99d12d652d8bf3da579db531a311b704f
+  languageName: node
+  linkType: hard
+
 "http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
   resolution: "http-cache-semantics@npm:4.1.1"
@@ -3058,6 +3065,7 @@ __metadata:
     eslint-plugin-tailwindcss: ^3.13.0
     framer-motion: ^10.12.18
     gsap: ^3.12.2
+    heroicons: ^2.0.18
     lodash: ^4.17.21
     next: latest
     postcss: 8.4.25

@@ -19,6 +19,7 @@
     "eslint-plugin-react": "^7.32.2",
     "framer-motion": "^10.12.18",
     "gsap": "^3.12.2",
+    "heroicons": "^2.0.18",
     "lodash": "^4.17.21",
     "next": "latest",
     "postcss": "8.4.25",
