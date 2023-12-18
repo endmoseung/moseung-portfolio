@@ -12,6 +12,8 @@ import useIsDocument from '@/utils/Hooks/useIsDocument'
 import { useScroll } from '@/utils/Hooks/useScroll'
 import { useRef, useState } from 'react'
 import Others from '@/Components/Sections/Others'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Home() {
   const [currentScroll, setCurrentScroll] = useState<string>('About')
@@ -20,7 +22,7 @@ export default function Home() {
   const mainRef = useRef(null)
 
   const handleScroll = (): void => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 400) {
       setIsHeaderShadow(true)
     } else if (window.scrollY < 100) {
       setIsHeaderShadow(false)
@@ -35,7 +37,7 @@ export default function Home() {
     <main
       ref={mainRef}
       // onScroll={handleScroll}
-      className="flex min-h-screen flex-col items-center justify-center p-[30px] mobile:p-[20px]"
+      className="flex min-h-screen flex-col items-center justify-center px-8 mobile:p-5"
     >
       <Header currentScroll={currentScroll} isHeaderShadow={isHeaderShadow} />
       <About setCurrentScroll={setCurrentScroll} />

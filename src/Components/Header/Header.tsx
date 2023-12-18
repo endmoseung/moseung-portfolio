@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Moseung from '/public/assets/Images/moseung.jpeg'
-import { TABS, TabsOriginType } from '@/utils/Constant/Constant'
+import Tab from './Tab/Tab'
 
 interface HeaderProps {
   currentScroll: string
@@ -11,16 +11,6 @@ interface HeaderProps {
 }
 
 const Header = ({ currentScroll, isHeaderShadow }: HeaderProps) => {
-  const handleClickHeader = (tabs: TabsOriginType) => {
-    setTimeout(
-      () =>
-        document
-          .querySelector(`#${tabs === 'About' ? 'layout' : tabs}`)
-          ?.scrollIntoView({ behavior: 'smooth' }),
-      0
-    )
-  }
-
   return (
     <header
       style={{
@@ -39,19 +29,7 @@ const Header = ({ currentScroll, isHeaderShadow }: HeaderProps) => {
         alt="Writers logo"
         onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}
       />
-      <div className=" flex gap-5">
-        {TABS.map((tab, index: number) => (
-          <p
-            className={`${
-              currentScroll === tab.title ? 'text-sub' : ''
-            } cursor-pointer text-2xl font-bold transition-all hover:text-sub mobile:text-xl`}
-            key={index}
-            onClick={() => handleClickHeader(tab.title)}
-          >
-            {tab.title}
-          </p>
-        ))}
-      </div>
+      <Tab currentScroll={currentScroll} />
     </header>
   )
 }
