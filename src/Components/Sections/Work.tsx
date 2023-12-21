@@ -25,7 +25,7 @@ const Work = ({ setCurrentScroll }: Section3Props) => {
       <GoTop isAnimationVisible={isIntersecting}>
         <Highlighter>Work</Highlighter>
       </GoTop>
-      <div className="flex" ref={targetRefs}>
+      <div className="flex flex-row mobile:flex-col" ref={targetRefs}>
         <Image
           width={200}
           height={200}

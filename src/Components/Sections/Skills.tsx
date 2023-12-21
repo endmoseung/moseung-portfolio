@@ -31,7 +31,10 @@ const Skills = ({ setCurrentScroll }: SkillsProps) => {
       </GoTop>
       <div className="" ref={targetRefs}>
         {SKILLS.map((skill, index: number) => (
-          <div key={index} className="mb-[120px] flex flex-col">
+          <div
+            key={index}
+            className="mb-[120px] flex flex-col mobile:mb-[60px]"
+          >
             <GoTop
               isNoInitial={true}
               isAnimationVisible={
@@ -52,12 +55,15 @@ const Skills = ({ setCurrentScroll }: SkillsProps) => {
                     : skill3TargetRefs
                 }
               >
-                <p className="w-fit rounded-full bg-gray-900 px-6 py-3 text-4xl  text-white">
+                <p className="w-fit rounded-full bg-gray-900 px-6 py-3 text-4xl text-white mobile:text-2xl">
                   {skill.title}
                 </p>
-                <div className="flex gap-1">
+                <div className="flex flex-wrap gap-1">
                   {skill.sub.map((sub, subIndex: number) => (
-                    <p className="text-xl" key={subIndex}>{`${sub}${
+                    <p
+                      className="text-xl mobile:text-base "
+                      key={subIndex}
+                    >{`${sub}${
                       subIndex !== skill.sub.length - 1 ? ',' : ''
                     }`}</p>
                   ))}

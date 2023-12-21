@@ -1,8 +1,12 @@
 import React from 'react'
-import Tab from './Tab'
+import { FaBars } from 'react-icons/fa'
 
 const Hamburger = () => {
-  return <div>{/* <Tab /> */}</div>
+  return (
+    <div>
+      <FaBars className="cursor-pointer" />
+    </div>
+  )
 }
 
 export default Hamburger
