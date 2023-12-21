@@ -1,4 +1,3 @@
-import useDevice from '@/utils/Hooks/useDevice'
 import React from 'react'
 
 interface HighlighterProps {
@@ -11,13 +10,11 @@ interface HighlighterProps {
  * @param className optional
  */
 const Highlighter = ({ children, className }: HighlighterProps) => {
-  const pc = useDevice('pc')
-  const tablet = useDevice('tablet')
   return (
     <p
-      className={`${className ? className : ''} block font-black ${
-        pc ? 'text-[18.75rem]' : tablet ? 'text-[14.75rem]' : 'text-[8rem]'
-      } text-sub !opacity-50`}
+      className={`${className ? className : ''} block text-[18.75rem]
+        font-black text-sub !opacity-50
+      tablet:text-[14.75rem] mobile:text-[6rem]`}
     >
       {children}
     </p>

@@ -1,9 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import Moseung from '/public/assets/Images/moseung.jpeg'
 import Tab from './Tab/Tab'
+import useDevice from '@/utils/Hooks/useDevice'
+import { FaBars } from 'react-icons/fa'
 
 interface HeaderProps {
   currentScroll: string
@@ -11,6 +13,8 @@ interface HeaderProps {
 }
 
 const Header = ({ currentScroll, isHeaderShadow }: HeaderProps) => {
+  const mobile = useDevice('mobile')
+  const [isTabVisible, setIsTabVisible] = useState(false)
   return (
     <header
       style={{
@@ -29,7 +33,19 @@ const Header = ({ currentScroll, isHeaderShadow }: HeaderProps) => {
         alt="Writers logo"
         onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}
       />
-      <Tab currentScroll={currentScroll} />
+      {mobile ? (
+        <FaBars
+          className="h-6 w-6 cursor-pointer"
+          onClick={() => setIsTabVisible(!isTabVisible)}
+        />
+      ) : (
+        <Tab currentScroll={currentScroll} />
+      )}
+      {isTabVisible && (
+        <div className="absolute bottom-0">
+          <Tab currentScroll={currentScroll} />
+        </div>
+      )}
     </header>
   )
 }
