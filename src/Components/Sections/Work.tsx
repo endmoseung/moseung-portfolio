@@ -37,7 +37,7 @@ const Work = ({ setCurrentScroll }: Section3Props) => {
           <p>2023.4 ~ 현재</p>
           <div className="flex">
             <Link
-              className=" whitespace-pre-wrap"
+              className="whitespace-pre-wrap "
               href="https://www.mk.co.kr/news/business/10869152"
             >
               {'국내 학원 진출, '}
