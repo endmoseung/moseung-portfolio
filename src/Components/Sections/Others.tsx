@@ -28,7 +28,6 @@ const Others = ({ setCurrentScroll }: OthersProps) => {
         </GoTop>
       </div>
       <div className="mb-5 flex flex-col gap-5">
-        <p className="mb-5 text-[3rem] font-bold">Study</p>
         {STUDY.map((study, index: number) => (
           <div className="flex flex-col gap-2" key={index}>
             <p className="text-[2rem] font-bold text-main">{study.title}</p>
@@ -59,7 +58,6 @@ const Others = ({ setCurrentScroll }: OthersProps) => {
         ))}
       </div>
       <div>
-        <p className="text-[3rem] font-bold">Presentation</p>
         {PRESENTATION.map((presentation, index: number) => (
           <div key={index}>
             <p>{presentation.title}</p>
