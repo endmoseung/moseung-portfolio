@@ -20,7 +20,7 @@ const Work = ({ setCurrentScroll }: Section3Props) => {
     <section
       id="Work"
       ref={refs}
-      className=" relative w-full max-w-[1200px] rounded-[50px] bg-gray-100 p-12 mobile:rounded-[30px] mobile:p-8"
+      className=" relative w-full max-w-[1200px] rounded-[50px] mobile:rounded-[30px] mobile:p-8"
     >
       <GoTop isAnimationVisible={isIntersecting}>
         <Highlighter>Work</Highlighter>
@@ -32,25 +32,30 @@ const Work = ({ setCurrentScroll }: Section3Props) => {
           alt="hodoo_image"
           src={'/assets/Images/hodoo.jpeg'}
         />
-        <div className="border-l border-b-black pl-[30px]">
-          <h1>호두랩스</h1>
-          <p>2023.4 ~ 현재</p>
-          <div className="flex">
-            <Link
-              className="whitespace-pre-wrap "
-              href="https://www.mk.co.kr/news/business/10869152"
-            >
-              {'국내 학원 진출, '}
-            </Link>
-            <Link href="https://www.mk.co.kr/news/business/10820137">
-              베트남 일본 진출
-            </Link>
-            <p>을 한 아이들 대상 에듀테크 플랫폼</p>
+        <div className="flex flex-col gap-5 border-l border-b-black pl-[30px]">
+          <h1 className=" text-[48px] mobile:text-[30px] ">호두랩스</h1>
+          <div className="text-xl mobile:text-base">
+            <p>2023.4 ~ 현재</p>
+            <div className="flex">
+              <Link
+                className="mr-2 whitespace-pre-wrap"
+                href="https://www.mk.co.kr/news/business/10869152"
+              >
+                {'국내 학원 진출, '}
+              </Link>
+              <Link href="https://www.mk.co.kr/news/business/10820137">
+                베트남 일본 진출
+              </Link>
+              <p>을 한 아이들 대상 에듀테크 플랫폼</p>
+            </div>
           </div>
-          <h3>주요업무</h3>
+          <h3 className="text-[36px] mobile:text-2xl">주요업무</h3>
           <ul>
             {WorkList.map((work) => (
-              <li className="list-disc font-MainFont" key={work}>
+              <li
+                className="list-disc font-MainFont text-xl mobile:text-base"
+                key={work}
+              >
                 {work}
               </li>
             ))}

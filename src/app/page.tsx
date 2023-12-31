@@ -46,9 +46,9 @@ export default function Home() {
     >
       <Header currentScroll={currentScroll} isHeaderShadow={isHeaderShadow} />
       <About setCurrentScroll={setCurrentScroll} />
-      <Skills setCurrentScroll={setCurrentScroll} />
       <Work setCurrentScroll={setCurrentScroll} />
       <Projects setCurrentScroll={setCurrentScroll} />
+      <Skills setCurrentScroll={setCurrentScroll} />
       <Others setCurrentScroll={setCurrentScroll} />
       <Footer />
     </main>

@@ -12,9 +12,9 @@ interface HighlighterProps {
 const Highlighter = ({ children, className }: HighlighterProps) => {
   return (
     <p
-      className={`${className ? className : ''} block text-[18.75rem]
+      className={`${className ? className : ''} block text-[8rem]
         font-black text-sub !opacity-50
-      tablet:text-[14.75rem] mobile:text-[6rem]`}
+      tablet:text-[6rem] mobile:text-[4rem]`}
     >
       {children}
     </p>
