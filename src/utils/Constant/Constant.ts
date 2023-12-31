@@ -48,10 +48,12 @@ export const SKILLS = [
   {
     title: 'Collaboration' as const,
     sub: ['Slack', 'Git', 'Figma', 'Jira'] as const,
+    description: '',
   },
   {
-    title: 'Others' as const,
+    title: 'Devops' as const,
     sub: ['Datadog', 'AWS', 'Jenkins'] as const,
+    description: '',
   },
 ]
 
@@ -136,6 +138,23 @@ export const PRESENTATION = [
       {
         title: '테오콘 회고글',
         link: 'https://velog.io/@endmoseung/%ED%85%8C%EC%98%A4%EC%BD%98-%EC%8A%A4%ED%83%9C%ED%94%84%EC%8A%A4%ED%94%BC%EC%BB%A4-%ED%9B%84%EA%B8%B0',
+      },
+    ],
+  },
+  {
+    title: '34만 유튜브 채널 인싸담당자 인터뷰',
+    details: [
+      '평소 스타트업에 대해 가지고 있는 견해와 앞으로의 방향성을 인터뷰',
+      '주제 : 내가 다닐 회사는 내가 고른다" 스타트업에 다니는 현직자들의 속시원한 인터뷰',
+    ],
+    links: [
+      {
+        title: '발표 영상',
+        link: 'https://www.youtube.com/watch?v=KUu2SxG5pCE',
+      },
+      {
+        title: '발표 내용을 각색한 블로그',
+        link: 'https://velog.io/@endmoseung/%EC%99%9C-%EB%AA%A8%EC%8A%B9%EC%9D%80-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%EC%97%90%EC%84%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A5%BC-%ED%95%98%EA%B3%A0%EC%9E%88%EB%82%98%EC%9A%94',
       },
     ],
   },

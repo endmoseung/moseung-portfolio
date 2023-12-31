@@ -3,7 +3,7 @@
 
 import Footer from '@/Components/Footer/Footer'
 import Header from '@/Components/Header/Header'
-import Projects from '@/Components/Sections/Projects'
+import Projects from '@/Components/Sections/Projects/Projects'
 import About from '@/Components/Sections/About'
 import Skills from '@/Components/Sections/Skills'
 import Work from '@/Components/Sections/Work'
