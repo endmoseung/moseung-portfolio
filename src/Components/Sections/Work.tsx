@@ -20,7 +20,7 @@ const Work = ({ setCurrentScroll }: Section3Props) => {
     <section
       id="Work"
       ref={refs}
-      className=" relative w-full max-w-[1200px] rounded-[50px] mobile:rounded-[30px] mobile:p-8"
+      className=" relative w-full max-w-[1200px] break-keep rounded-[50px] mobile:rounded-[30px] mobile:p-8"
     >
       <GoTop isAnimationVisible={isIntersecting}>
         <Highlighter>Work</Highlighter>
