@@ -39,7 +39,7 @@ export const SKILLS = [
       'Recoil',
       'Zustand',
       'TailwindCss',
-      'CSS In Js',
+      'Emotion',
       'NextJS(13)',
       'Echarts',
     ] as const,
@@ -50,7 +50,7 @@ export const SKILLS = [
     sub: ['Slack', 'Git', 'Figma', 'Jira'] as const,
   },
   {
-    title: 'ETC' as const,
+    title: 'Others' as const,
     sub: ['Datadog', 'AWS', 'Jenkins'] as const,
   },
 ]

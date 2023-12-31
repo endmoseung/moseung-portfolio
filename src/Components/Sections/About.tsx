@@ -20,9 +20,7 @@ const About = ({ setCurrentScroll }: AboutProps): ReactElement => {
       <div className="mb-14 text-start font-MainFont text-6xl font-bold leading-[82.5px] transition-all duration-300 tablet:text-5xl tablet:leading-[66px] mobile:text-4xl mobile:leading-[50px]">
         <p>안녕하세요.</p>
         <div className="mb-8 break-keep">
-          <p className=" inline-block whitespace-pre">
-            나만의 코어기술을 가진{' '}
-          </p>
+          <p className="inline-block whitespace-pre ">지치치 않는 열정적인</p>
           <br />
           <p className=" inline-block text-[#FF5722]">
             프론트엔드 개발자 김승모입니다.
