@@ -20,9 +20,7 @@ const GoTop = ({
         <motion.div
           className={`${className ? className : ''}`}
           initial={isNoInitial ? false : { opacity: 0, y: 100 }}
-          animate={
-            isAnimationVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
-          }
+          animate={isAnimationVisible && { opacity: 1, y: 0 }}
           transition={{
             duration: 1,
             type: 'spring',

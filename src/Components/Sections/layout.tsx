@@ -1,3 +1,4 @@
+import React from 'react'
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -13,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body id="layout" className=" bg-white">
+      <body id="layout" className="bg-white ">
         <div className=" pt-[10.5rem]">{children}</div>
       </body>
     </html>
